@@ -111,8 +111,6 @@ class _DisplayPlaceState extends State<DisplayPlace> {
                               ],
                             ),
                           ),
-                          // for vendor profile
-                          // vendorProfile(place),
                         ],
                       ),
                       SizedBox(

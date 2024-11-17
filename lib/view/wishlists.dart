@@ -79,7 +79,6 @@ class Wishlists extends StatelessWidget {
                                     var favoriteItems = snapShot.data!;
                                     return Stack(
                                       children: [
-                                        // image of favorite items
                                         Container(
                                           decoration: BoxDecoration(
                                             borderRadius:
@@ -92,7 +91,7 @@ class Wishlists extends StatelessWidget {
                                             ),
                                           ),
                                         ),
-                                        // favorite icon in the top right corner
+
                                         const Positioned(
                                           top: 8,
                                           right: 8,
@@ -101,7 +100,7 @@ class Wishlists extends StatelessWidget {
                                             color: Colors.red,
                                           ),
                                         ),
-                                        // title of favorite items
+
                                         Positioned(
                                             bottom: 8,
                                             left: 8,

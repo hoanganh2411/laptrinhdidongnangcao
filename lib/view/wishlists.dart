@@ -22,7 +22,7 @@ class Wishlists extends StatelessWidget {
                 const Align(
                   alignment: Alignment.centerRight,
                   child: Text(
-                    "Edit",
+                    "chỉnh sửa",
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -32,7 +32,7 @@ class Wishlists extends StatelessWidget {
                 ),
                 const SizedBox(height: 35),
                 const Text(
-                  "Wishlists",
+                  "danh sách yêu thích",
                   style: TextStyle(
                     fontSize: 35,
                     fontWeight: FontWeight.bold,
@@ -41,7 +41,7 @@ class Wishlists extends StatelessWidget {
                   const SizedBox(height: 5),
                 favoriteItems.isEmpty
                     ? const Text(
-                        "No Favorites items yet",
+                        "Chưa có mục yêu thích",
                         style: TextStyle(
                           fontSize: 19,
                           fontWeight: FontWeight.w600,
@@ -73,7 +73,7 @@ class Wishlists extends StatelessWidget {
                                     if (!snapShot.hasData ||
                                         snapShot.data == null) {
                                       return const Center(
-                                        child: Text("Error loading favorites"),
+                                        child: Text("Lỗi tải mục yêu thích"),
                                       );
                                     }
                                     var favoriteItems = snapShot.data!;

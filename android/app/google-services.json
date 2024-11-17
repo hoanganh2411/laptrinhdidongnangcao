@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "271090303951",
+    "firebase_url": "https://hoanganh-df1ad-default-rtdb.firebaseio.com",
+    "project_id": "hoanganh-df1ad",
+    "storage_bucket": "hoanganh-df1ad.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:271090303951:android:1120aad4a848e9874708ba",
+        "android_client_info": {
+          "package_name": "com.example.hoanganh"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPafTxCFZTGOwSKWb46IkeOaWtHOeweuk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

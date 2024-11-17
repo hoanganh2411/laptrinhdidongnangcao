@@ -1,7 +1,7 @@
 import 'package:another_carousel_pro/another_carousel_pro.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import '../Provider/favorite_provider.dart';
+import 'package:hoanganh/Provider/favorite_provider.dart';
 
 
 class DisplayPlace extends StatefulWidget {
@@ -12,7 +12,7 @@ class DisplayPlace extends StatefulWidget {
 }
 
 class _DisplayPlaceState extends State<DisplayPlace> {
-  // collection for place items
+
   final CollectionReference placeCollection =
       FirebaseFirestore.instance.collection("myAppCpollection");
   @override
@@ -34,15 +34,6 @@ class _DisplayPlaceState extends State<DisplayPlace> {
                 padding: const EdgeInsets.symmetric(
                   horizontal: 20,
                 ),
-                // child: GestureDetector(
-                //   onTap: () {
-                //     Navigator.push(
-                //       context,
-                //       MaterialPageRoute(
-                //         builder: (_) => PlaceDetailScreen(place: place),
-                //       ),
-                //     );
-                //   },
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [

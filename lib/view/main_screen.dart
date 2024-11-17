@@ -66,7 +66,7 @@ class _AppMainScreenState extends State<AppMainScreen> {
               height: 30,
               color: selectedIndex == 2 ? Colors.pinkAccent : Colors.black45,
             ),
-            label: "chuyến đi",
+            label: "lịch trình",
           ),
           BottomNavigationBarItem(
             icon: Image.network(

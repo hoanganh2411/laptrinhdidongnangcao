@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import '../components/display_place.dart';
-import '../components/search_bar_and_filter.dart';
+import 'package:hoanganh/components/search_bar_and_filter.dart';
+import 'package:hoanganh/components/display_place.dart';
 
 
 class ExploreScreen extends StatefulWidget {
@@ -12,7 +12,6 @@ class ExploreScreen extends StatefulWidget {
 }
 
 class _ExploreScreenState extends State<ExploreScreen> {
-  // collection for category
   final CollectionReference categoryCollection =
       FirebaseFirestore.instance.collection("AppCategory");
 
@@ -26,15 +25,13 @@ class _ExploreScreenState extends State<ExploreScreen> {
         bottom: false,
         child: Column(
           children: [
-            // for search bar and filter button
             const SearchBarAndFilter(),
-            // let's fetch list of category items from firebase.
+
             listOfCategoryItems(size),
             const Expanded(
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    // displat the place items
                     DisplayPlace(),
 
                   ],

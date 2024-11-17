@@ -2,7 +2,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hoanganh/Authentication/google_authentication.dart';
 import 'package:hoanganh/view/main_screen.dart';
 import 'package:flutter/material.dart';
-// import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -38,10 +37,11 @@ class _LoginScreenState extends State<LoginScreen> {
               Padding(
                 padding: const EdgeInsets.all(16),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text(
-                      "chào mừng đến với HoangAnh",
+                      "TRAVELOCA",
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -51,28 +51,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: size.height * 0.02,
                     ),
 
-                    // for phone number field,
                     phoneNumberField(size),
-                    // const SizedBox(height: 10),
-                    // RichText(
-                    //   text: const TextSpan(
-                    //     text:
-                    //         "We'll call or text you to conform your number. Standart message and data rates apply.  ",
-                    //     style: TextStyle(
-                    //       fontSize: 15,
-                    //       color: Colors.black,
-                    //     ),
-                    //     children: [
-                    //       TextSpan(
-                    //         text: "Privacy Policy",
-                    //         style: TextStyle(
-                    //           fontWeight: FontWeight.bold,
-                    //           decoration: TextDecoration.underline,
-                    //         ),
-                    //       ),
-                    //     ],
-                    //   ),
-                    // ),
+
                     SizedBox(height: size.height * 0.03),
                     Container(
                       width: size.width,

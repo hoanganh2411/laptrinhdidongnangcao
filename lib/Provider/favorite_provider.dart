@@ -4,8 +4,7 @@ import 'package:provider/provider.dart';
 
 
 class FavoriteProvider extends ChangeNotifier {
-  // we hae also save the favorite items in firebase and display it in nex time
-  // it is not loast until user remove from favoite
+
   List<String> _favoriteIds = [];
   final FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
   List<String> get favorites => _favoriteIds;
@@ -14,28 +13,25 @@ class FavoriteProvider extends ChangeNotifier {
     loadFavorite();
   }
 
-  // toggle favorites states
   void toggleFavorite(DocumentSnapshot place) async {
     String placeId = place.id;
     if (_favoriteIds.contains(placeId)) {
       _favoriteIds.remove(placeId);
-      await _removeFavorite(placeId); // remove grom favorite
+      await _removeFavorite(placeId);
     } else {
       _favoriteIds.add(placeId);
-      await _addFavorites(placeId); // add to favorite
+      await _addFavorites(placeId);
     }
     notifyListeners();
   }
 
-  // check if a place is afavorited
   bool isExist(DocumentSnapshot place) {
     return _favoriteIds.contains(place.id);
   }
 
-  // add favorites items to firestore
   Future<void> _addFavorites(String placeId) async {
     try {
-      // create the userFavorite collection and add items as favorites in firestore
+
       await firebaseFirestore
           .collection("userFavorites")
           .doc(placeId)
@@ -45,17 +41,14 @@ class FavoriteProvider extends ChangeNotifier {
     }
   }
 
-  // remove favorites items from friestore
   Future<void> _removeFavorite(String placeId) async {
     try {
-      // create the userFavorite collection and add items as favorites in firestore
       await firebaseFirestore.collection("userFavorites").doc(placeId).delete();
     } catch (e) {
       print(e.toString());
     }
   }
 
-  // load favorites itesm from firestore (if user make some items favorite then load this items)
   Future<void> loadFavorite() async {
     try {
       QuerySnapshot snapshot =
@@ -67,7 +60,6 @@ class FavoriteProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  // Static method to access the provider from any context
   static FavoriteProvider of(BuildContext context, {bool listen = true}) {
     return Provider.of<FavoriteProvider>(
       context,
